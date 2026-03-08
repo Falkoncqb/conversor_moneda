@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Monedas Nacional</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Conversor de monedas Nacional</h1>
+        <p class="subtitle">Ingresar monto sin puntos ni signos</p>
+        
+        <div class="card">
+            <h3>Pesos CLP</h3>
+            <input type="number" id="montoCLP" placeholder="Ingrese el monto en CLP">
+            
+            <label for="moneda">Moneda a convertir:</label>
+            <select id="moneda">
+                <option value="" disabled selected>Seleccione moneda</option>
+                <option value="dolar">Dólar</option>
+                <option value="euro">Euro</option>
+                </select>
+
+            <button id="btnBuscar">Buscar</button>
+            
+            <div id="resultado" class="resultado-texto">...</div>
+        </div>
+
+        <div class="grafico-container">
+            <canvas id="myChart"></canvas>
+        </div>
+        
+        <div id="error" class="error-msg"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
